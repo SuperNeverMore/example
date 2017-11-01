@@ -1,0 +1,49 @@
+/*--------------------------------集成字体库-------------------------------*/
+@import url(sn-font/iconfont.css);
+/*----------------------------------前缀----------------------------------*/
+@prefix: sn-;
+@primary: --primary;
+@success: --success;
+@warning: --warning;
+@danger: --danger;
+@info: --info;
+/*----------------------------------Colors------------------------------- */
+// 字体颜色
+@base-color: #fff;
+// 背景色
+@base-background-color: #9966FF;
+
+/*************基本颜色***************/
+@--primary: @base-background-color;
+@--success: #13ce66;
+@--warning: #f7ba2a;
+@--danger: #ff4949;
+@--info: #50bfff;
+
+// 边框颜色
+@base-border-color: @base-background-color;
+// link
+@link-color: @base-color;
+// 默认border-radius
+@border-radius: 4px;
+// 默认手势
+@cursor: pointer;
+
+/*-------------------------------button-------------------------------------*/ 
+.color-hover(@color: @base-background-color) {
+    background-color: @color;
+    border-color: @color;
+    &&:hover {
+        background-color: lighten(@color,10%);
+        border-color: lighten(@color,10%);
+    }
+}
+
+// 一些颜色运算：
+// saturate(@base-color, 10%);  //增加一定数值的颜色饱和度。
+// desaturate(@red, 10%);  //降低一定数值的颜色饱和度。
+// lighten(@base-color, 10%);   //增加一定数值的颜色亮度。
+// darken(@base-color, 10%);    //降低一定数值的颜色亮度。
+// fadein(@base-color, 10%);    //降低颜色的透明度（或增加不透明度）
+// adeout(@base-color, 10%);    //增加颜色的透明度（或降低不透明度）
+// ade(@base-color, 50%);   //给颜色（包括不透明的颜色）设定一定数值的透明度。
